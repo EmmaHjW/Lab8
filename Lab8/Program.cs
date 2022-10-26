@@ -115,11 +115,17 @@ namespace Lab8
 
             Employee foundEmployee = EmpList.Find(x => x.Gender == "Male");
             Console.WriteLine(foundEmployee);
-            List<Employee> Employee = EmpList.FindAll(x => x.Gender == "Male");
-            Console.WriteLine(EmpList);
+            List<Employee> GenderResult = new List<Employee>(EmpList.FindAll(i => i.Gender == "Male"));
+            Console.WriteLine();
+            foreach (var gender in GenderResult)
+            {
+                Console.WriteLine();
+                Console.WriteLine(gender);
+                Console.WriteLine();
+            }
 
-            
-            
+
+
 
 
         }
